@@ -10,8 +10,15 @@ class BottomSheetPage extends StatefulWidget {
 class _BottomSheetPageState extends State<BottomSheetPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text('1'),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('BottomSheetDemo'),
+      ),
+      body: Text('1'),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.power_settings_new),
+        onPressed: () {},
+      ),
     );
   }
 }
