@@ -8,6 +8,15 @@ class BottomSheetPage extends StatefulWidget {
 }
 
 class _BottomSheetPageState extends State<BottomSheetPage> {
+  /// 弹窗
+  Future<int> showActionSheets() {
+    return showModalBottomSheet<int>(
+        context: context,
+        builder: (BuildContext context) {
+          return Container();
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +26,9 @@ class _BottomSheetPageState extends State<BottomSheetPage> {
       body: Text('1'),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.power_settings_new),
-        onPressed: () {},
+        onPressed: () async {
+          showActionSheets();
+        },
       ),
     );
   }
