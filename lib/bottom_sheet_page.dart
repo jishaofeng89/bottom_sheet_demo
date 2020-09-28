@@ -1,3 +1,4 @@
+import 'package:bottom_sheet_demo/video_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 
 class BottomSheetPage extends StatefulWidget {
@@ -13,7 +14,7 @@ class _BottomSheetPageState extends State<BottomSheetPage> {
     return showModalBottomSheet<int>(
         context: context,
         builder: (BuildContext context) {
-          return Container();
+          return VideoBottomSheet();
         });
   }
 
